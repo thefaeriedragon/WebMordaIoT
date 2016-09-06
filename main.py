@@ -4,11 +4,10 @@ from flask import send_from_directory
 
 app = Flask(__name__)
 
+inx = 0
 
-# app.static_folder="/home/denisr/PycharProjects/WebMorda/static/"
 
 @app.route('/')
-@app.route('/hello/<name>')
 def hello(name=None):
     return render_template('index.html', name=name)
 
@@ -20,4 +19,12 @@ def send_js(path):
 
 @app.route('/getData/<chart>')
 def send_data(chart="chartX"):
-    return jsonify({chart: "hello"})
+    global inx
+    inx += 1
+    return jsonify({
+        "x": "x",
+        "columns": [
+            ['data1', inx],
+            ['x', inx * 2]
+        ]
+    })

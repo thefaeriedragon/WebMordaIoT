@@ -1,5 +1,11 @@
+function loadData(chart){
+$.getJSON( "getData/chart1", function( data ) {
+        chart.load(data);
+});
+}
+
 function makePlots(){
-var chart = c3.generate({
+var chart1 = c3.generate({
     bindto: '#chart',
     data: {
       columns: [
@@ -17,7 +23,7 @@ var chart = c3.generate({
     }
 });
 
-var chart = c3.generate({
+var chart2 = c3.generate({
     bindto: '#chart2',
     data: {
       columns: [
@@ -26,6 +32,10 @@ var chart = c3.generate({
 
     }
 });
+var ti = setInterval(function() {
+loadData(chart1);
+ }
+, 1000);
 
 }
 
@@ -58,17 +68,10 @@ jQuery("#pot1", svgdom).hover(
 }
 
 
-function loadData(){
-$.getJSON( "getData/chart1", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
-  });
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "body" );
-});
+
+
+function clicked(){
+loadData($("#chart"));
 }
 
 makePlots();

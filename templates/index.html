@@ -1,21 +1,30 @@
 <!doctype html>
 <head>
-<!-- Load c3.css -->
-<link href="/static/js/c3/c3.css" rel="stylesheet" type="text/css">
-<link href="/static/css/index.css" rel="stylesheet">
-<!-- Load d3.js and c3.js -->
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="/static/js/c3/c3.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-</head>
-<body>
-<div id="field">
-    <div id="chart"></div>
-    <div id="chart2"></div>
-</div>
-<object data="/static/map.svg" type="image/svg+xml" id="imap" ></object>
+    <script src="/static/js/mapPicker.js"></script>
+    <!-- Load c3.css -->
+    <link href="/static/js/c3/c3.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <!-- Load d3.js and c3.js -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="/static/js/c3/c3.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<button id="test" onclick="clicked()" ></button>
-</body>
+
+</head>
+
+
+<div id="header">Header</div>
+<div id="main-wrap">
+    <div id="sidebar">
+        <div id="field">
+            <div id="chart"></div>
+            <div id="chart2"></div>
+        </div>
+    </div>
+    <div id="content-wrap">
+        <object data="/static/MaketFinish.svg" type="image/svg+xml" id="imap" onload="svgMechanic()"></object>
+    </div>
+</div>
+<div id="footer">Footer</div>
 
 <script src="/static/js/dataloader.js"></script>

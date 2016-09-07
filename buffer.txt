@@ -1,0 +1,15 @@
+#chart {
+width:45%;
+}
+
+
+#chart2 {
+width:45%;
+}
+
+#imap{
+position: absolute;
+width:45%;
+top: 5px;
+right: 10px;
+}

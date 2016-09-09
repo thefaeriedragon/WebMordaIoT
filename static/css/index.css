@@ -1,58 +1,17 @@
-/**
- * basic layout
- */
+#imap {
+height: 90vh;
+width: 100%;
 
-	/* colors */
-	#header,
-	#footer {
+}
 
-	}
+#header {
 
-	#main-wrap {
+height: 5vh;
 
-	}
+}
 
-	#sidebar {
+#footer {
 
-	}
+height: 5vh;
 
-	#content-wrap {
-
-	}
-
-
-	#header,
-	#footer {
-		height: 5vh;
-	}
-
-
-	#main-wrap > div { height: 100%; }
-
-	/* layout */
-	#main-wrap {
-	    height: 88vh;
-	    /* overflow to handle inner floating block */
-	    overflow: hidden;
-	}
-
-	#sidebar {
-	    float: left;
-	    width: 40%;
-	}
-    #chart{
-        min-height:43vh;
-    }
-    #chart2{
-        min-height:43vh;
-    }
-	#imap{
-	width: 100%;
-	}
-
-	#content-wrap {
-	    float: right;
-	    width: 60%;
-	}
-
-
+}
